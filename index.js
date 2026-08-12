@@ -269,6 +269,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Ensure "All Brands" is active and all products are displayed on initial load
+  filterCategory('all');
+
   // Link Our Partners Brand Cards directly to their catalogue filter
   document.querySelectorAll('.brand-card').forEach(brandCard => {
     brandCard.addEventListener('click', () => {
