@@ -1389,14 +1389,14 @@ button {
 
 .footer__brand-text {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.7;
   max-width: 320px;
 }
 
 .footer__heading {
   font-family: var(--font-heading);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--white);
   margin-bottom: 20px;
@@ -1411,7 +1411,7 @@ button {
 
 .footer__link-list a {
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.80);
   transition: color 0.3s var(--ease-out), padding-left 0.3s var(--ease-out);
 }
 
@@ -1429,7 +1429,7 @@ button {
 
 .footer__copy {
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .footer__socials {
@@ -1444,8 +1444,8 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.90);
   transition: all 0.3s var(--ease-out);
 }
 
