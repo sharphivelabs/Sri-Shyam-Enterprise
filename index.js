@@ -502,7 +502,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
           const response = await fetch(currentProduct.imgSrc);
           const blob = await response.blob();
-          const file = new File([blob], `${currentProduct.name.replace(/\s+/g, '_')}.png`, { type: blob.type || 'image/png' });
+          const file = new File([blob], `${currentProduct.name.replace(/\s+/g, '_')}.webp`, { type: blob.type || 'image/webp' });
 
           const totalBags = Math.round(currentProduct.tons * 20);
           const locationVal = (modalLocation ? modalLocation.value.trim() : '');
