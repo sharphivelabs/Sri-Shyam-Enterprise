@@ -1813,21 +1813,34 @@ button {
   }
 
   .hero__actions {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    gap: 12px;
-    flex-wrap: wrap;
+    gap: 10px;
+    flex-wrap: nowrap;
   }
 
   .hero__actions .btn {
-    width: auto;
-    flex: 1 1 140px;
-    padding: 12px 18px;
-    font-size: 0.88rem;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 10px 12px;
+    font-size: clamp(0.76rem, 3.4vw, 0.84rem);
+    font-weight: 700;
+    letter-spacing: 0px;
+    white-space: nowrap;
     justify-content: center;
     text-align: center;
+    gap: 5px;
+    height: 42px;
+    box-sizing: border-box;
+  }
+
+  .hero__actions .btn__arrow {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
   }
 
   /* 3D Showcase Mobile Viewport Fit & Balanced Spacing */
