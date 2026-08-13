@@ -410,6 +410,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateModalState();
 
+    const dialog = productModal.querySelector('.product-modal__dialog');
+    if (dialog) dialog.scrollTop = 0;
+
     productModal.classList.add('is-open');
     productModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');

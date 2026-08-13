@@ -2012,16 +2012,23 @@ button {
 /* ========================================
    PRODUCT ORDER QUANTITY MODAL POPUP
    ======================================== */
+/* ========================================
+   PRODUCT ORDER QUANTITY MODAL POPUP
+   ======================================== */
 .product-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   z-index: 999999;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 16px;
+  padding: max(16px, env(safe-area-inset-top, 16px)) max(16px, env(safe-area-inset-right, 16px)) max(24px, env(safe-area-inset-bottom, 24px)) max(16px, env(safe-area-inset-left, 16px));
+  box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s var(--ease-out), visibility 0.3s ease;
@@ -2058,14 +2065,18 @@ body.modal-open .whatsapp-fab {
   width: 90%;
   max-width: 640px;
   max-height: 90vh;
+  max-height: 90dvh;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   border-radius: 0px;
   border: 2px solid var(--blue-900);
   box-shadow: 0 24px 70px rgba(15, 26, 62, 0.45);
   transform: scale(0.92) translateY(20px);
   transition: transform 0.35s var(--ease-out);
   box-sizing: border-box;
+  margin: auto;
 }
 
 .product-modal.is-open .product-modal__dialog {
@@ -2351,21 +2362,101 @@ body.modal-open .whatsapp-fab {
 }
 
 @media (max-width: 640px) {
+  .product-modal {
+    padding: 10px;
+    padding: max(10px, env(safe-area-inset-top, 10px)) max(10px, env(safe-area-inset-right, 10px)) max(20px, env(safe-area-inset-bottom, 20px)) max(10px, env(safe-area-inset-left, 10px));
+  }
+
+  .product-modal__dialog {
+    width: 100%;
+    max-height: calc(100dvh - 24px);
+    max-height: calc(100vh - 24px);
+    border-width: 1.5px;
+  }
+
   .product-modal__body {
     grid-template-columns: 1fr;
-    padding: 24px 18px;
-    gap: 20px;
+    padding: 18px 16px 28px 16px;
+    gap: 14px;
   }
+
+  .product-modal__preview {
+    padding: 12px 10px;
+    background: var(--blue-50);
+  }
+
   .product-modal__img-wrap {
-    height: 140px;
+    height: 110px;
   }
+
   .product-modal__img-wrap img {
-    max-height: 130px;
+    max-height: 100px;
   }
+
+  .product-modal__brand-badge {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    margin-top: 8px;
+  }
+
   .product-modal__title {
     font-size: 1.25rem;
+    margin-bottom: 2px;
   }
+
+  .product-modal__desc {
+    font-size: 0.82rem;
+    margin-bottom: 12px;
+  }
+
+  .product-modal__order-box {
+    padding-top: 12px;
+  }
+
+  .product-modal__label {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+  }
+
+  .product-modal__qty-stepper {
+    margin-bottom: 10px;
+    gap: 12px;
+  }
+
   .qty-val {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
+  }
+
+  .qty-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.15rem;
+  }
+
+  .product-modal__chips {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .qty-chip {
+    padding: 5px 10px;
+    font-size: 0.74rem;
+  }
+
+  .product-modal__bags-info {
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+  }
+
+  .product-modal__input {
+    padding: 8px 12px;
+    font-size: 0.84rem;
+    margin-bottom: 14px;
+  }
+
+  .btn--whatsapp-order {
+    padding: 13px 18px;
+    font-size: 0.92rem;
+    margin-bottom: 4px;
   }
 }
