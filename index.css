@@ -1295,8 +1295,8 @@ button {
 
 .contact__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .contact-card {
@@ -1304,7 +1304,7 @@ button {
   text-decoration: none;
   color: inherit;
   background: var(--white);
-  padding: 36px 32px;
+  padding: 32px 20px;
   border-radius: 0px;
   border: 1.5px solid var(--gray-100);
   text-align: center;
@@ -1346,13 +1346,19 @@ button {
 
 .contact-card__value {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--blue-800);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
+}
+
+.contact-card__email-text {
+  font-size: 0.82rem;
+  word-break: break-all;
+  line-height: 1.4;
 }
 
 .contact-card__value a {
@@ -1521,6 +1527,11 @@ button {
 
   .footer__inner {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .contact__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
